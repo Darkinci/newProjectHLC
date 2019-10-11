@@ -10,7 +10,13 @@ class LibrosController extends Controller{
          y cuando llamo a la funcion, esta me responde!</h1>";
     }
 
-    public function show(){
+    /*public function show(){
         return view('welcome');
+    } */
+
+    // Solo se puede mostrar una vista con Show 
+
+    public function show(){
+        return view('presentacion');
     }
 }
