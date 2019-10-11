@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'LibrosController@index');
 
-Route::get('libros', function () {
-    return "Hola aplicacion libros";
+Route::get('libros', 'LibrosController@show');
+
+Route::get('libros/{id_libro}', function ($id_libro) {
+    //en cuanto nos ponga una cadena (del tipo que sea), mostrara por pantalla "este es el libro 'abeja' " por ejemplo
+    return "Este es el libro {$id_libro}";
 });
