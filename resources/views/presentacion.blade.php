@@ -11,7 +11,7 @@
 
         <!-- Styles -->
         <style>
-            html, body {
+            html{
                 background-color: lightskyblue;
                 color: #636b6f;
                 font-family: 'Consolas';
@@ -38,23 +38,44 @@
             header{
                 width: auto;
                 height: 15%;
-                color: black;
-                border: 2px;
+                border: 3px solid red;
             }
+
+            div.cuerpo {
+                width: auto;
+                height: 75%;
+                border: 3px solid white;
+            }
+
+            footer{
+                width: auto;
+                height: 10%;
+                border: 3px solid green;
+            }
+            aside{
+                width: 10%;
+                height: 100%;
+                float: right;
+                border: 2px solid blue;
+            }
+
         </style>
     </head>
     <body>
         <header>
-            <p> Esto es un magnifico header </p>
+            <h1> Header Here! </p>
         </header>
+        <div class="cuerpo">
+        <aside> <h5> Publicidad here! </h5></aside>
         <h1> Prueba de una plantilla de vistas en LARAVEL! </h1>
-        <h2> Hecho por Jorge Ortega Nieto </h2>
+        <h2> Hecho por {{$nombre}} </h2>
         <?php 
             echo "<h3>Hoy es ". date('l jS \of F Y h:i A') . "</h3>" ;
         ?>
-
+        
+        </div>
         <footer>
-             <p> Hecho por Jorge </p> 
+             <p> Footer hecho por {{$nombre}} </p> 
         </footer>
     </body>
 </html>
