@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Presentacion</title>
+        <title>Proyecto Laravel @yield('TituloPag')</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -54,8 +54,8 @@
             }
             aside{
                 width: 10%;
-                height: 100%;
-                float: right;
+                height: 165px;
+                float: left;
                 border: 2px solid blue;
             }
 
@@ -68,14 +68,13 @@
         <div class="cuerpo">
         <aside> <h5> Publicidad here! </h5></aside>
         <h1> Prueba de una plantilla de vistas en LARAVEL! </h1>
-        <h2> Hecho por {{$nombre}} </h2>
         <?php 
             echo "<h3>Hoy es ". date('l jS \of F Y h:i A') . "</h3>" ;
         ?>
         
         </div>
         <footer>
-             <p> Footer hecho por {{$nombre}} </p> 
+             @yield('Footer')
         </footer>
     </body>
 </html>
