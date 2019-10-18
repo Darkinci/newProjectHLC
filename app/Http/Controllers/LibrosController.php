@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
+        //Las siguientes sentencias
+        // Sin "iluminate" da errores, asi que tenemos
+        // que poner la siguiente ruta
+        use Illuminate\Support\Facades\DB;
 
 class LibrosController extends Controller{
     public function index(){
@@ -18,7 +22,14 @@ class LibrosController extends Controller{
         //return view ('presentacion',['nombre' =>'Jorge Ortega']);
 
         //Ahora en vez de irnos al padre, vamos a irnos al hijo.
-        return view('presentacion-hija');
+        //return view('presentacion-hija');
+
+        //ahora vamos a probar a meter una base de datos como salida
+        $libros = DB::select('select * from libros');
+         dd($libros);
+        //return view('child',['books' => $libros]);
+
+        
 
 
     }
