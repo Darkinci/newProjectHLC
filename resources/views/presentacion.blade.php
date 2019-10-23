@@ -54,7 +54,7 @@
             }
             aside{
                 width: 10%;
-                height: 165px;
+                height: 10%;
                 float: left;
                 border: 2px solid blue;
             }

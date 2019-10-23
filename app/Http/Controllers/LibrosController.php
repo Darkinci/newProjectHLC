@@ -25,9 +25,13 @@ class LibrosController extends Controller{
         //return view('presentacion-hija');
 
         //ahora vamos a probar a meter una base de datos como salida
-        $libros = DB::select('select * from libros');
-         dd($libros);
-        //return view('child',['books' => $libros]);
+        //$libros = DB::select('select * from libros');
+
+        // vamos a cambiar lasentencia SQL, vamos a usar otra
+        $libros = DB::table('libros')->get();
+
+        //dd($libros);
+        return view('presentacion-hija',['books' => $libros]);
 
         
 
