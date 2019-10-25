@@ -16,6 +16,7 @@ class LibrosController extends Controller{
         // Otra opcion es crear la variable y ponerla donde esta ahora
         //['nombre => 'Jorge Ortega'];
         // $nombre = "Jorge Ortega";
+
         
         //return view ('presentacion',['nombre' =>'Jorge Ortega']);
 
