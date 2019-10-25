@@ -13,11 +13,11 @@
 
 Route::get('/', 'LibrosController@index');
 
-Route::get('libros', 'LibrosController@show');
+Route::get('libros/{id}', 'LibrosController@show');
 
 Route::get('plantilla','LibrosController@show');
 
-Route::get('libros/{id_libro}', function ($id_libro) {
+/*Route::get('libros/{id_libro}', function ($id_libro) {
     //en cuanto nos ponga una cadena (del tipo que sea), mostrara por pantalla "este es el libro 'abeja' " por ejemplo
     return "Este es el libro {$id_libro}";
-});
+});*/

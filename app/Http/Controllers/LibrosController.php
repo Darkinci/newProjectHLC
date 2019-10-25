@@ -17,8 +17,6 @@ class LibrosController extends Controller{
         //['nombre => 'Jorge Ortega'];
         // $nombre = "Jorge Ortega";
         
-        
-        
         //return view ('presentacion',['nombre' =>'Jorge Ortega']);
 
         //Ahora en vez de irnos al padre, vamos a irnos al hijo.
@@ -32,19 +30,20 @@ class LibrosController extends Controller{
 
         //dd($libros);
         return view('presentacion-hija',['books' => $libros]);
-
-        
-
-
     }
 
     /*public function show(){
         return view('welcome');
     } */
 
-    // Solo se puede mostrar una vista con Show 
+    // ------------------------¡¡¡¡¡¡¡ Solo se puede mostrar una vista con Show !!!!!! -------------------------
 
-    public function show(){
+    /* public function show(){
         return view('presentacion');
+    }*/
+
+    public function show($id){
+        $libro=DB::table('libros')->find($id);
+        return view('libroconcreto',['books' => $libro]);
     }
 }

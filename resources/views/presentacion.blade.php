@@ -66,6 +66,7 @@
             <h1> Header Here! </p>
         </header>
         <div class="cuerpo">
+            @yield('Cuerpo');
         <aside> <h5> Publicidad here! </h5></aside>
         <h1> Prueba de una plantilla de vistas en LARAVEL! </h1>
         <?php 
